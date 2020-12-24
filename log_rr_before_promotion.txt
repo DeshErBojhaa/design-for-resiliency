@@ -1,0 +1,35 @@
+mysql> LIST DATABASES;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIST DATABASES' at line 1
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| proj1              |
++--------------------+
+4 rows in set (0.01 sec)
+
+mysql> LELECT * FROM proj1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LELECT * FROM proj1' at line 1
+mysql> USE proj1;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT * FROM proj1;
+ERROR 1146 (42S02): Table 'proj1.proj1' doesn't exist
+mysql> SELECT * FROM t1;
++------+
+| id   |
++------+
+|  100 |
++------+
+1 row in set (0.00 sec)
+
+mysql> WRITE INTO t1 VALUES(200);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WRITE INTO t1 VALUES(200)' at line 1
+mysql> INSERT INTO t1 VALUES(200);
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql>
